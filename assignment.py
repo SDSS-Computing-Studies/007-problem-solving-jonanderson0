@@ -1,8 +1,28 @@
 #! python3
-import pyautogui as p
+import pyautogui
 import time
-p.moveTo(243,439)
-p.click()
+pyautogui.pause=0
+def clickCookie(c):
+    for x in range(int(c)):
+        pyautogui.click(290,487)
+
+def buyUpgrades():
+    pyautogui.click(1635,256)
+    pyautogui.click(1635,256)
+    pyautogui.click(1635,256)
+
+    pyautogui.click(1693,331)
+    pyautogui.click(1693,331)
+    pyautogui.click(1693,331)
+    for a in range(3):
+        for x in range(11):
+            pyautogui.click(1850,1000-x*65)
+        pyautogui.click(1693,135)
+    
+count = 100
+
 while True:
-    p.click(243,439)
-    time.sleep(0)
+    time.sleep(1)
+    clickCookie(count)
+    count = count*1.1
+    buyUpgrades()
